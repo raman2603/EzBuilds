@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Welcome to Easy Build App</h1>
+
+<form action="@{/process_questions}" method="post">
+    <div>
+        <label for="question">Enter your question:</label>
+        <input type="text" id="question" name="question" required>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+<div th:if="${message}">
+    <p th:text="${message}"></p> <!-- Display the generated YAML script message -->
+</div>
+
+</body>
+</html>
